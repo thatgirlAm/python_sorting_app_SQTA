@@ -3,6 +3,8 @@ import quick_sort as qs
 import testLib as tst
 import unittest
 
+# function calling test functions and functions for each sorting algorithms 
+
 testU = unittest.TestLoader().loadTestsFromModule(tst)
 unittest.TextTestRunner(verbosity=2).run(testU)
 
