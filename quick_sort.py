@@ -1,7 +1,7 @@
 # Unit tests
 import unittest
 
-# QuickSort function
+# Quick Sort function
 def quick_sort(arr):
     if len(arr) <= 1:  # Base case: an array of 0 or 1 elements is already sorted
         return arr
