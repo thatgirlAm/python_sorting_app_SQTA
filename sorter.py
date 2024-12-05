@@ -9,6 +9,7 @@ def radix_number(array):
     # transforming numbers in strings to access the digits and populating the output array
     for element in array:
         str_array.append(str(element))
+
         output_array.append(element)
 
     max_digits = len(str_array[0])

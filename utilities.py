@@ -7,6 +7,7 @@ def number_digits(element, digit, max_digits):
     return int(element_str[digit])
 
 
+
 # this function creates a dictionary for each input array to remember the position of each element
 def dictionary(array):
     array_dictionary = {}
