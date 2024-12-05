@@ -2,22 +2,13 @@
 
 import utilities
 def radix_number(array):
-    str_array = []
+    max_digits = utilities.max_digit(array)
     dictionary = utilities.dictionary(array)
     output_array = []
 
-    # transforming numbers in strings to access the digits and populating the output array
+    # populating the output array
     for element in array:
-        str_array.append(str(element))
-
         output_array.append(element)
-
-    max_digits = len(str_array[0])
-
-    # getting the highest number of digits in the array :max_digits
-    for element in str_array:
-        if len(element) > max_digits:
-            max_digits = len(element)
 
     # initiating loops for radix sorting
     for i in range(max_digits):
@@ -42,5 +33,32 @@ def radix_number(array):
 
     return output_array, dictionary
 
+def radix_string(array):
+    dictionary = utilities.dictionary(array)
+    output_array = array.copy()
+    max_length = utilities.max_digit(array)
+
+    for i in range(max_length):
+        temp_output = []
+        for element in output_array:
+            inserted = False
+
+            # comparison and changing position
+            for j, other in enumerate(temp_output):
+                letter_element = utilities.fill_strings(element.lower(), max_length, -i - 1)
+                letter_other = utilities.fill_strings(other.lower(), max_length, -i - 1)
+                if utilities.key_finder_2(letter_element, utilities.LETTERS_RANKING) < utilities.key_finder_2(letter_other, utilities.LETTERS_RANKING):
+                    temp_output.insert(j, element)
+                    inserted = True
+                    break
+
+            if not inserted:
+                temp_output.append(element)
+
+        output_array = temp_output
+    return output_array, dictionary
+
+
+print(radix_string(["sa", "salut", "argente", "Ifeu", "as" ,"jirejguhirgbdhsifbzejdcn"]))
 print(radix_number([234,4567,33, 33, 123849505, 5673, 2]))
 
