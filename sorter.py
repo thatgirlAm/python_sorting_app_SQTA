@@ -62,7 +62,9 @@ def radix_string(array):
 
 
 # merge sorting method
-
+def merge_numbers(array):
+    output_array = []
+    return output_array
 
 # Examples
 
