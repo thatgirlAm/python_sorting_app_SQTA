@@ -59,6 +59,9 @@ def radix_string(array):
     return output_array, dictionary
 
 
-print(radix_string(["sa", "salut", "argente", "Ifeu", "as" ,"jirejguhirgbdhsifbzejdcn"]))
+
+# Examples
+
+print(radix_string(["sa", "sal067ut", "argente", "Ifeu", "as" ,"jirejguhirgbdhsifbzejdcn"]))
 print(radix_number([234,4567,33, 33, 123849505, 5673, 2]))
 
