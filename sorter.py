@@ -66,6 +66,7 @@ def merge_numbers(array):
     output_array = []
     return output_array
 
+
 # Examples
 
 print(radix_string(["sa", "sal067ut", "argente", "Ifeu", "as" ,"jirejguhirgbdhsifbzejdcn"]))
