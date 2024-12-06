@@ -40,6 +40,17 @@ def merge(left, right):
 
 
 def compare_strings(str1, str2):
+    # If both are non-strings, compare directly
+    if not isinstance(str1, str) and not isinstance(str2, str):
+        return str1 < str2
+
+    # If one is a string and the other isn't, prioritize strings
+    if isinstance(str1, str) and not isinstance(str2, str):
+        return False  # Non-strings come before strings
+    if not isinstance(str1, str) and isinstance(str2, str):
+        return True  # Strings come after non-strings
+
+    # If both are strings, perform string-specific comparison
     # Transform strings to lowercase for case-insensitive comparison
     str1 = str1.lower()
     str2 = str2.lower()
@@ -55,8 +66,7 @@ def compare_strings(str1, str2):
         if rank1 != rank2:
             return rank1 < rank2  # Return True if char1 comes before char2
 
-    return len(str1) <= len(str2)  # Tie-breaker: shorter strings come first
+    # If strings are identical up to the length of the shorter one,
+    # prioritize the shorter string
+    return len(str1) <= len(str2)
 
-
-print(merge_sort(["Banana", "apple", "Orange", "banana", "APPLE"]))
-print(merge_sort([38, 27, "apple", 3, "banana"]))
