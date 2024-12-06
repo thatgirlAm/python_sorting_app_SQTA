@@ -14,4 +14,3 @@ def type(array):
         if not isinstance(element, (str, float)):
             return False
     return True
-
