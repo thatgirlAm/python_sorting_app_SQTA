@@ -1,6 +1,8 @@
 # this is the sorter file
 
 import utilities
+
+# radix sorting method
 def radix_number(array):
     max_digits = utilities.max_digit(array)
     dictionary = utilities.dictionary(array)
@@ -58,6 +60,11 @@ def radix_string(array):
         output_array = temp_output
     return output_array, dictionary
 
+
+# merge sorting method
+def merge_numbers(array):
+    output_array = []
+    return output_array
 
 
 # Examples
