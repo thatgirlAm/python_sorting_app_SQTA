@@ -1,5 +1,4 @@
 # this is the sorter file
-
 import utilities
 
 # radix sorting method
@@ -22,7 +21,6 @@ def radix_number(array):
             for j, other_element in enumerate(temp_output):
                 digit_element = utilities.number_digits(element, -(i + 1), max_digits)
                 digit_other = utilities.number_digits(other_element, -(i + 1), max_digits)
-
                 # comparison and appending digits in temporary array
                 if digit_element < digit_other:
                     temp_output.insert(j, element)
@@ -60,12 +58,10 @@ def radix_string(array):
         output_array = temp_output
     return output_array, dictionary
 
-
 # merge sorting method
 def merge_numbers(array):
     output_array = []
     return output_array
-
 
 # Examples
 
