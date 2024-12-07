@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/STQARASD_Assignment/FileContentIndex/0e3e4c44-fdd2-4806-9b09-2fdcea431f2f.vsidx
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/STQARASD_Assignment/FileContentIndex
+/.vs/STQARASD_Assignment/v17
+/.vs/VSWorkspaceState.json
