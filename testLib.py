@@ -46,5 +46,32 @@ class Test_testLib(unittest.TestCase):
         self.assertEqual(bs.bubble_sort(["Apple", "apple", "Banana", "banana"]), ["Apple", "Banana", "apple", "banana"])
         self.assertEqual(qs.quick_sort(["Apple", "apple", "Banana", "banana"]), ["Apple", "Banana", "apple", "banana"])
 
+
+
+    # def validate_array(user_input):
+    #     for item in user_input:
+    #         if not item.isalnum():  # Check if the item is not alphanumeric
+    #             raise ValueError(f"Invalid element '{item}' detected! Only alphabets and digits are allowed.")
+    #     return user_input
+
+    # try:
+    #     # Get input from the user
+    #     user_input = input("Enter elements separated by spaces (only alphabets or digits): ").split()
+
+    #     # Validate the input
+    #     valid_array = validate_array(user_input)
+    #     print("Valid array:", valid_array)
+
+    # except ValueError as e:
+    #     print("Error:", e)
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     unittest.main()

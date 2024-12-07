@@ -1,5 +1,7 @@
 # ---------- This is the utilities files for functions we might need to use several times ---------- #
-
+import csv
+import random
+import string
 # GLOBALS
 LETTERS_RANKING = {chr(i): i - ord('a') for i in range(ord('a'), ord('z') + 1)}
 # option to be careful about special character "-"
@@ -50,4 +52,30 @@ def key_finder(value, dictionary):
 def key_finder_2(char, ranking):
     return ranking.get(char, -1)
 
+
+def generate_random_word(length=5):
+    return ''.join(random.choices(string.ascii_lowercase, k=length))
+
+def generate_StringArray(dSize):
+    return [generate_random_word(random.randint(3, 10)) for _ in range(dSize)]
+
+def generate_numberArray(dSize):
+    return [random.randint(0, 1000000) for _ in range(dSize)]
+
+def add_data(data, index, element, extime):
+    data.append({"Index": index, "Sorting Algo": element, "Execution Time": extime})
+
+def export2CSV(rowData):
+    # Write data to a CSV file
+    with open("execution_time.csv", mode="w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=["Index", "Sorting Algo", "Execution Time"])
+        writer.writeheader()
+        writer.writerows(rowData)
+
+    print("Performance Data has been exported to data.csv")
+
+def createRecord(arrayDict, arrayStart):
+    for i in range(len(arrayStart)):
+        arrayDict[i] = arrayStart[i]
+    return arrayDict
 

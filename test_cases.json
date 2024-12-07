@@ -1,0 +1,106 @@
+{
+  "test_cases": [
+    {
+      "id": "TST1",
+      "input": [ "apple", "123", "banana", "45" ],
+      "expected": [ "apple", "123", "banana", "45" ],
+      "description": "Test to check if algorithm sorts input with alphabets and digits"
+    },
+    {
+      "id": "TST2",
+      "input": [ "apple", "!app", "banana", "h@$h" ],
+      "expected": "Invalid element '!@#$' detected! Only alphabets and digits are allowed.",
+      "description": "Test to check if algorithm sorts string containing special characters"
+    },
+    {
+      "id": "TST3",
+      "input": [ "apple123", "456", "dog" ],
+      "expected": [ "apple123", "456", "dog" ],
+      "description": "Test to check if algorithm sorts alphanumeric strings"
+    },
+    {
+      "id": "TST4",
+      "input": [ "!@#", "$%^", "&*()" ],
+      "expected": "Invalid element '!@#' detected! Only alphabets and digits are allowed.",
+      "description": "Test to check if algorithm sorts only special characters"
+    },
+    {
+      "id": "TST5",
+      "input": [ 1, 2, 3, 4, 5 ],
+      "expected": [ 1, 2, 3, 4, 5 ],
+      "description": "Test to check if algorithm affects already sorted number array"
+    },
+    {
+      "id": "TST6",
+      "input": [ "apple", "banana", "cherry", "date", "elderberry", "fig" ],
+      "expected": [ "apple", "banana", "cherry", "date", "elderberry", "fig" ],
+      "description": "Test to check if algorithm affects already sorted string array"
+    },
+    {
+      "id": "TST7",
+      "input": [ 3, 6, 8, 10, 1, 2, 1 ],
+      "expected": [ 1, 1, 2, 3, 6, 8, 10 ],
+      "description": "Test to check if algorithm sorts unsorted number array"
+    },
+    {
+      "id": "TST8",
+      "input": [ "sjsi", "asa", "dieszc", "osrwn", "eyba", "yernhsb", "tebsxj" ],
+      "expected": [ "asa", "dieszc", "eyba", "osrwn", "sjsi", "tebsxj", "yernhsb" ],
+      "description": "Test to check if algorithm sorts unsorted string array"
+    },
+    {
+      "id": "TST9",
+      "input": [ 42 ],
+      "expected": [ 42 ],
+      "description": "Test to check if algorithm sorts single element number array"
+    },
+    {
+      "id": "TST10",
+      "input": [ "apple" ],
+      "expected": [ "apple" ],
+      "description": "Test to check if algorithm sorts single element string array"
+    },
+    {
+      "id": "TST11",
+      "input": [],
+      "expected": [],
+      "description": "Test to check if algorithm affects empty array"
+    },
+    {
+      "id": "TST12",
+      "input": [ 5, 4, 3, 2, 1 ],
+      "expected": [ 1, 2, 3, 4, 5 ],
+      "description": "Test to check if algorithm sorts reversed number array"
+    },
+    {
+      "id": "TST13",
+      "input": [ "fig", "elderberry", "date", "cherry", "banana", "apple" ],
+      "expected": [ "apple", "banana", "cherry", "date", "elderberry", "fig" ],
+      "description": "Test to check if algorithm sorts reversed string array"
+    },
+    {
+      "id": "TST14",
+      "input": [ 4, 2, 2, 8, 5, 5, 5, 1 ],
+      "expected": [ 1, 2, 2, 4, 5, 5, 5, 8 ],
+      "description": "Test to check if algorithm sorts number array containing duplicate elements"
+    },
+    {
+      "id": "TST15",
+      "input": [ "apple", "banana", "cherry", "apple", "banana", "date", "cherry", "fig" ],
+      "expected": [ "apple", "apple", "banana", "banana", "cherry", "cherry", "date", "fig" ],
+      "description": "Test to check if algorithm sorts string array containing duplicate elements"
+    },
+    {
+      "id": "TST16",
+      "input": [ -3, -1, -4, -2, 0 ],
+      "expected": [ -4, -3, -2, -1, 0 ],
+      "description": "Test to check if algorithm sorts number array containing negative elements"
+    },
+    {
+      "id": "TST17",
+      "input": [ "Apple", "apple", "Banana", "banana" ],
+      "expected": [ "Apple", "Banana", "apple", "banana" ],
+      "description": "Test to check if algorithm sorts string array containing mixed case elements"
+    }
+  ]
+}
