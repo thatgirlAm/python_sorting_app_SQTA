@@ -1,13 +1,29 @@
-# Unit tests
+# STQARASD_Assignment/quick_sort.py
+
 import unittest
 
-# Quick Sort function
 def quick_sort(arr):
-    if len(arr) <= 1:  # Base case: an array of 0 or 1 elements is already sorted
+
+    """Sort entered array using quick sort.
+
+    Examples:
+        >>> quick_sort([12, 42, 1, 4, 73])
+        [1, 4, 12, 42, 73]
+        >>> quick_sort(["green", "red", "orange", "blue"])
+        ["blue", "green", "orange", "red"]
+
+    Args:
+        An input array containing string or number data type.
+
+    Returns:
+        An array containing sorted input data.
+    """
+
+    if len(arr) <= 1:
         return arr
     else:
-        pivot = arr[len(arr) // 2]  # Choose the middle element as the pivot
-        left = [x for x in arr if x < pivot]  # Elements less than the pivot
-        middle = [x for x in arr if x == pivot]  # Elements equal to the pivot
-        right = [x for x in arr if x > pivot]  # Elements greater than the pivot
-        return quick_sort(left) + middle + quick_sort(right)  # Recursively sort and combine
+        pivot = arr[len(arr) // 2]
+        left = [x for x in arr if x < pivot]
+        middle = [x for x in arr if x == pivot]
+        right = [x for x in arr if x > pivot]
+        return quick_sort(left) + middle + quick_sort(right)

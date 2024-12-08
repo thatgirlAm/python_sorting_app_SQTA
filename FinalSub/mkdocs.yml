@@ -1,0 +1,12 @@
+site_name: Python Sorting Algorithm Docs
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - index.md
+  - how-to-guides.md
+  - explanation.md
