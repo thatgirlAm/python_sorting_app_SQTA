@@ -1,3 +1,14 @@
+# STQARASD_Assignment/main.py
+
+"""Entry point for this library, responsible to allow initialising of input array, execution of sorting algoritms and validation of their logic.
+
+The module contains the following functions:
+
+- `enterData()` - Returns an array of user entered data.
+- `generateStringData()` - Returns an array containing string data of size specified by the user.
+- `generateNumberData()` - Returns an array containing number data of size specified by the user.
+"""
+
 from tkinter import WORD
 import bubble_sort as bs
 import quick_sort as qs
@@ -10,7 +21,6 @@ import utilities
 import re
 
 
-# function calling test functions and functions for each sorting algorithms 
 testU = unittest.TestLoader().loadTestsFromModule(tst)
 unittest.TextTestRunner(verbosity=2).run(testU)
 
@@ -21,15 +31,18 @@ numbDict = {}
 strDict = {}
 
 def enterData():
+
+    """Create an array of user entered data.
+
+    Returns:
+        Return arrays of either string or number data.
+    """
+
     user_data_input = input("Enter elements separated by spaces (mix of numbers and strings): ").split()
     number_array = []
     string_array = []
     for item in user_data_input:
-        
-        print(item)
-        print(type(item))
 
-        # if(check_user_number(item)):
         if(item.isdigit()):
             number_array.append(item)
         elif not (bool(re.search(r'[^A-Za-z0-9]', item))):
@@ -37,19 +50,30 @@ def enterData():
         else:
             pass
 
-    print("number: ", number_array, " str: ", string_array)
     return number_array, string_array
 
 def generateStringData():
+
+    """Produce automatically an array of user specified size and containing strings of varied size.
+
+    Returns:
+        Return a string array.
+    """
+
     dataSize = int(input("Enter the size of string array to be generated: "))
     string_array = utilities.generate_StringArray(dataSize)
-    print("Original string array: ",string_array)
     return string_array
 
 def generateNumberData():
+
+    """Produce automatically an array of user specified size and containing random numbers.
+
+    Returns:
+        Return a number array.
+    """
+
     dataSize = int(input("Enter the size of number array to be generated: "))
     number_array = utilities.generate_numberArray(dataSize)
-    print("Original number array: ",number_array)
     return number_array
 
 user_input = int(input("Enter 1 to enter input array or Enter 2 to auto-generate string input arrays or Enter 3 to auto-generate number input arrays: "))
@@ -84,7 +108,6 @@ algorithms = {
     }
 i = 0
 for algo in algorithms:
-    print("1 number: ", number_array, " str: ", string_array)
     if len(string_array) != 0:
         start_time = time.time()
         sorted_array = algo(string_array)
