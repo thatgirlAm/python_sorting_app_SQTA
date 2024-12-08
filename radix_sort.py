@@ -1,23 +1,3 @@
-def radix_sort_mixed(arr):
-    """
-    Sorts an array containing numbers and strings using Radix Sort.
-    Numbers are sorted numerically, and strings are sorted lexicographically.
-    :param arr: List of numbers and strings to sort
-    :return: Sorted list
-    """
-    # Separate numbers and strings
-    numbers = [x for x in arr if isinstance(x, int)]
-    strings = [x for x in arr if isinstance(x, str)]
-
-    # Sort numbers using Radix Sort
-    numbers = radix_sort_numbers(numbers)
-
-    # Sort strings using Radix Sort
-    strings = radix_sort_strings(strings)
-
-    # Combine sorted numbers and strings (if needed)
-    return numbers + strings
-
 def radix_sort(array):
     
     for x in array:
@@ -29,7 +9,6 @@ def radix_sort(array):
             return radix_sort_strings(strings)
         else:
             pass
-
 
 def counting_sort_for_numbers(arr, exp):
     """
@@ -121,11 +100,3 @@ def radix_sort_strings(arr):
         counting_sort_for_strings(arr, pos)
 
     return arr
-
-
-# Example Usage
-mixed_array = [123, "apple", 45, "banana", "123", 7, "orange", 789]
-
-print("Original array:", mixed_array)
-sorted_array = radix_sort_mixed(mixed_array)
-print("Sorted array:", sorted_array)
