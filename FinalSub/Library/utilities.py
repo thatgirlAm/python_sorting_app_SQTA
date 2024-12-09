@@ -85,9 +85,7 @@ def dictionary(array):
         Return the index of the gap.
     """
 
-    array_dictionary = {}
-    for i in range(len(array)):
-        array_dictionary[i] = array[i]
+    array_dictionary = { i: value for i, value in enumerate(array) }
     return array_dictionary
 
 def key_finder(value, dictionary):
@@ -207,4 +205,4 @@ def createRecord(arrayDict, arrayStart):
     for i in range(len(arrayStart)):
         arrayDict[i] = arrayStart[i]
     return arrayDict
-
+        
