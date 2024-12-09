@@ -82,9 +82,35 @@ def write_results_to_csv(results, output_file):
         for result in results:
             writer.writerow(result)
 
+def rankAlgo(rslt):
+    s1 = 0
+    s2 = 0
+    s3 = 0
+    s4 = 0
+    for i in rslt:
+        algo = i["algorithm"]
+        status = i["status"]
+        
+        if algo == "Bubble Sort" and status == "FAIL":
+            s1+=1
+        elif algo == "Merge Sort" and status == "FAIL":
+            s2+=1
+        elif algo == "Quick Sort" and status == "FAIL":
+            s3+=1
+        elif algo == "Radix Sort" and status == "FAIL":
+            s4+=1
+
+    print("Score on basis of test cases failed: ")
+    print("Bubble Sort: ", s1)
+    print("Merge Sort: ", s2)
+    print("Quick Sort: ", s3)
+    print("Radix Sort: ", s4)
+
+
 
 if __name__ == "__main__":
     output_file = "test_result.csv"
     results = run_tests("test_cases.json")
     write_results_to_csv(results, output_file)
     print(f"Test results written to {output_file}")
+    rankAlgo(results)
